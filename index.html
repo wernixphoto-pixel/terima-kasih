@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terima Kasih Sudah Menonton</title>
+
+<style>
+html,
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:transparent;
+}
+
+/* Container fullscreen */
+.container{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* Gambar closing */
+.closing{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    opacity:0;
+    transform:scale(1);
+
+    animation:closingAnimation 25s ease-in-out forwards;
+}
+
+/* Animasi closing */
+@keyframes closingAnimation{
+
+    /* Fade In */
+    0%{
+        opacity:0;
+        transform:scale(1);
+    }
+
+    8%{
+        opacity:1;
+        transform:scale(1.01);
+    }
+
+    /* Tetap tampil */
+    20%{
+        opacity:1;
+        transform:scale(1.02);
+    }
+
+    /* Zoom perlahan */
+    80%{
+        opacity:1;
+        transform:scale(1.06);
+    }
+
+    /* Fade Out */
+    100%{
+        opacity:0;
+        transform:scale(1.08);
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <img
+        class="closing"
+        src="terima kasih sudah menonton.png"
+        alt="Terima Kasih Sudah Menonton">
+</div>
+
+</body>
+</html>
